@@ -1,0 +1,11 @@
+{
+    "name": "r/crypto",
+    "autoload": {
+        "psr-4": {
+            "Crypto\\": "src/"
+        }
+    },
+    "require": {
+        "markrogoyski/math-php": "2.*"
+    }
+}
