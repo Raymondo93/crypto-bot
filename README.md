@@ -47,7 +47,6 @@ are interacting with the system. The userstories describes the interactions of t
 
 ### Strategies
 - Auto trade between the support and resistance level of an asset. The bot will watch some assets in the exchange and calculate the asset with the highest profit between the support and resistance.
-- 
 
 
 #### Userstories I dream about
@@ -124,7 +123,7 @@ To display the architecture of the software, the [C4-model](https://c4model.com/
 motivation class diagrams/sequence diagrams will be ignored. Unless there is a complicated issue with design decisions
 there will be class diagrams/sequence diagrams and an explanation why this is implemented.
 
-### Context
+### Context diagram
 
 ![Context diagram](documentation/images/Context_diagram.drawio.png)
 
@@ -134,9 +133,13 @@ The application will calculate (in first form by support/resistance) the assets 
 notification or something).
 The bot will execute the commands to the API of the exchange. 
 
-### Container
+### Container diagram
 
-### Components
+![Container diagram](documentation/images/Container_diagram.drawio.png)
+
+### Component diagrams
+
+
 ## Code 
 Any implementation details?
 
