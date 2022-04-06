@@ -1,11 +1,14 @@
 {
-    "name": "r/crypto",
-    "autoload": {
-        "psr-4": {
-            "Crypto\\": "src/"
-        }
-    },
-    "require": {
-        "markrogoyski/math-php": "2.*"
+  "name": "r/crypto",
+  "autoload": {
+    "psr-4": {
+      "Crypto\\": "src/"
     }
+  },
+  "require": {
+    "markrogoyski/math-php": "2.*",
+    "mongodb/mongodb": "^1.8",
+    "guzzlehttp/guzzle": "^7.0",
+    "ext-yaml": "*"
+  }
 }
