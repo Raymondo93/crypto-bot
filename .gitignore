@@ -3,3 +3,5 @@ config/
 .idea/
 idea-dump.txt
 vendor
+
+node_modules
