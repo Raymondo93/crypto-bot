@@ -4,4 +4,6 @@ config/
 idea-dump.txt
 vendor
 
+dist
+
 node_modules
