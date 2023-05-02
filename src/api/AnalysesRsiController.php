@@ -12,6 +12,7 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class AnalysesRsiController extends BaseController {
 
+    // TODO => php doc with url and example
     public static function calculateRelativeStrengthIndex(array $params, int $period = 14) {
         try {
             $klines = (new AnalysesRsiController)->getKlinesFromExchange($params['exchange'], $params['symbol'],

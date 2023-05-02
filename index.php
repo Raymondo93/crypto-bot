@@ -1,10 +1,11 @@
 <?php
 
-use Crypto\api\router;
+use Crypto\api\Router;
 
 require_once 'vendor/autoload.php';
 
 const ROOT = __DIR__;
+
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);

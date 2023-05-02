@@ -9,8 +9,7 @@ use \MongoDB\Database;
 class MongoConnection
 {
 
-    public function __construct(private string $server, private string $database, private string $username,
-                                private string $password) {
+    public function __construct(private readonly string $server, private readonly string $database) {
 
     }
 

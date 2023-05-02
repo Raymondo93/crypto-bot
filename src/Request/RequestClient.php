@@ -15,7 +15,7 @@ class RequestClient {
      */
     public static function createClient(string $baseUri): Client {
         return new Client([
-          'verify' => 'C:\\Users\\R\\Workspace\\php80\\extras\\cacert\\cacert.pem',
+//          'verify' => 'C:\\Users\\R\\Workspace\\php80\\extras\\cacert\\cacert.pem',   // this is windows specific, do it via configs
           'base_uri' => $baseUri
         ]);
     }

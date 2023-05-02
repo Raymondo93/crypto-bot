@@ -4,6 +4,14 @@ namespace Crypto\api;
 
 class Router {
 
+    /**
+     * Author: Raymond de Bruine
+     * Date: Unknown
+     * This class is the router class. All routes will come through this and sent them to the right class
+     * ALL URL'S NEED TO START WITH '/api/v<version>'. ex. '/api/v1/kucoin/markethistory/klines'.
+     * @param array $uri
+     * @param string $method
+     */
     public function __construct(array $uri, string $method) {
         switch(strtoupper($method)) {
             case 'GET':
@@ -26,18 +34,22 @@ class Router {
         switch($uri) {
             case 'kucoin/markethistory/klines': //kucoin could be removed, but this endpoint was for testing purpose only
                 $params = $this->parseGetVarsInArray($_GET);
-                MarketHistoryController::handle(MarketHistoryController::class, 'getKlinesFromExchange',
+                BaseController::handle(MarketHistoryController::class, 'getKlinesFromExchange',
                   $params);
                 break;
             case 'analysis/rsi':
                 $params = $this->parseGetVarsInArray($_GET);
-                AnalysesRsiController::handle(AnalysesRsiController::class, 'calculateRelativeStrengthIndex', $params);
+                BaseController::handle(AnalysesRsiController::class, 'calculateRelativeStrengthIndex', $params);
                 break;
         }
     }
 
     private function post(string $uri) {
         switch($uri) {
+            case 'authentication/login':
+                $params = $this->parseGetVarsInArray($_GET);
+                BaseController::handle(AuthenticationController::class, 'loginUser', $params);
+                break;
             default: header('HTTP/1.1 404 Not found.');
         }
     }

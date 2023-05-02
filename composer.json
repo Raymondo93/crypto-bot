@@ -7,8 +7,8 @@
   },
   "require": {
     "markrogoyski/math-php": "2.*",
-    "mongodb/mongodb": "^1.8",
     "guzzlehttp/guzzle": "^7.0",
-    "ext-yaml": "*"
+    "ext-yaml": "*",
+    "mongodb/mongodb": "^1.12"
   }
 }
